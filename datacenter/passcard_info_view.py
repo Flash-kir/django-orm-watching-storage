@@ -1,15 +1,15 @@
+import datetime
+from pytz import timezone
+from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+from django.utils.timezone import localtime
+
 from datacenter.models import Passcard
 from datacenter.models import Visit
-from django.shortcuts import render
-import datetime
-from django.shortcuts import get_object_or_404
 
 
 def get_duration(visit):
-    if visit.leaved_at:
-        visit_end_time = visit.leaved_at
-    else:
-        visit_end_time = localtime(timezone('UTC'))
+    visit_end_time = localtime(visit.leaved_at, timezone('UTC'))
     return datetime.timedelta(
         days=visit_end_time.day-visit.entered_at.day,
         hours=visit_end_time.hour-visit.entered_at.hour,
@@ -31,7 +31,6 @@ def passcard_info_view(request, passcode):
             'duration': get_duration(visit),
             'is_strange': if_visit_long(visit)
         })
-    print(this_passcard_visits)
     context = {
         'passcard': passcard,
         'this_passcard_visits': this_passcard_visits
