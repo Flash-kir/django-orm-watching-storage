@@ -20,6 +20,12 @@
 
     pip install -r requirenments.txt
 
+Перед запуском выполните команду:
+
+    cp example.env .env
+
+Заполните параметры с префиксом 'DB_' в файле .env для подключения к базе данных.
+
 Для запуска вызовите:
 
-    python main.py
+    python manage.py
