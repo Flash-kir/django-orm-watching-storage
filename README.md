@@ -25,6 +25,7 @@
     cp example.env .env
 
 Настройте переменные окружения в файле .env:
+
 SECRET_KEY='eyJtZXNzYWdlIjoiS' - создание ключа описано в [документации](https://docs.djangoproject.com/en/4.1/topics/signing/).
 DB_ENGINE='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#engine).
 DB_HOST='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#host).
