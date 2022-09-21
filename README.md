@@ -24,7 +24,16 @@
 
     cp example.env .env
 
-Заполните параметры с префиксом 'DB_' в файле .env для подключения к базе данных.
+Настройте переменные окружения в файле .env:
+SECRET_KEY='eyJtZXNzYWdlIjoiS' - создание ключа описано в [документации](https://docs.djangoproject.com/en/4.1/topics/signing/).
+DB_ENGINE='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#engine).
+DB_HOST='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#host).
+DB_PORT='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#port).
+DB_NAME='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#name).
+DB_USER='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#user).
+DB_PASSWORD='' - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#password).
+DEBUG=True - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-DEBUG).
+ALLOWED_HOSTS=['127.0.0.1','0.0.0.0'] - рекомендации по [настройке](https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-ALLOWED_HOSTS).
 
 Для запуска вызовите:
 
